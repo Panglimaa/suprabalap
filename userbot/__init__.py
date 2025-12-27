@@ -119,11 +119,12 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/vckyou/GeezProjects")
+    "https://github.com/Panglimaa/suprabalap")
 
 # Owner Only
 DEVS = (
 7580977919,
+6439305813,
 )
 # sudo
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
@@ -223,8 +224,8 @@ EMOJI_HELP = os.environ.get("EMOJI_HELP") or "🔶"
 ICON_HELP = os.environ.get("ICON_HELP", "ꖒ")
 
 # Support
-GROUP = os.environ.get("GROUP", "GeezSupport")
-CHANNEL = os.environ.get("CHANNEL", "GeezProject")
+GROUP = os.environ.get("GROUP", "t.me/SupraSupport")
+CHANNEL = os.environ.get("CHANNEL", "t.me/yailahwangs")
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)

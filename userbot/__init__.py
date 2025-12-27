@@ -123,10 +123,7 @@ UPSTREAM_REPO_URL = os.environ.get(
 
 # Owner Only
 DEVS = (
-    874946835,
-    1488093812,
-    1826643972,
-    1977874449,
+7580977919,
 )
 # sudo
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
@@ -200,7 +197,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Geez-UserBot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "suprabalap")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "1.1.0")
@@ -213,7 +210,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/c92925807ed5a1c68ebff.png"
+    "ALIVE_LOGO") or ":https://telegra.ph/file/c92925807ed5a1c68ebff.png"
 
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(
@@ -458,9 +455,8 @@ def paginate_help(page_number, loaded_modules, prefix):
 
 with bot:
     try:
-        bot(JoinChannelRequest("@UserbotCh"))
-        bot(JoinChannelRequest("@ramsupportt"))
-        bot(JoinChannelRequest("@geezProjectt"))
+        bot(JoinChannelRequest("https://t.me/yailahwangs"))
+        
         
         dugmeler = CMD_HELP
         user = bot.get_me()
@@ -474,11 +470,11 @@ with bot:
         async def handler(event):
             await event.message.get_sender()
             text = (
-                f"**Hey**, __I am using__  **GeezUserbot** \n\n"
+                f"**Hey**, __I am using__  **suprabalap** \n\n"
                 f"       __Thanks For Using me__\n\n"
-                f" **Group Support :** [GEEZ](t.me/GeezSupport)\n"
-                f" **Owner Repo :** [Vicky](t.me/vckyaz)\n"
-                f" **Repo :** [GeezProjects](https://github.com/vckyou/Geez-Userbot)\n"
+                f" **Group Support :** [SupraBalap](https://t.me/yailahwangs)\n"
+                f" **Owner Repo :** [Wang](t.me/N9_Feghter)\n"
+                f" **Repo :** [GeezProjects](https://github.com/Panglimaa/suprabalap)\n"
             )
             await tgbot.send_file(
                 event.chat_id,
@@ -487,16 +483,16 @@ with bot:
                 buttons=[
                     [
                         custom.Button.url(
-                            text="REPO GEEZ-USERBOT",
-                            url="https://github.com/vckyou/Geez-Userbot",
+                            text="REPO suprabalap",
+                            url="https://github.com/Panglimaa/suprabalap",
                         )
                     ],
                     [
                         custom.Button.url(
-                            text="GROUP", url="https://t.me/GeezSupport"
+                            text="GROUP", url="https://t.me/suprasupport"
                         ),
                         custom.Button.url(
-                            text="CHANNEL", url="https://t.me/GeezProjectt"
+                            text="CHANNEL", url="https://t.me/yailahwangs"
                         )
                     ],
                 ],
@@ -507,12 +503,12 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@Geez-Userbot"):
+            if event.query.user_id == uid and query.startswith("@sprabalap"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=geezlogo,
                     link_preview=False,
-                    text=f"**Inline In GeezProjects**\n\n⛑️ **Owner** [Vicky](t.me/vckyaz)\n**Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**Inline In SupraBalap**\n\n⛑️ **Owner** [Wang](@N9_Feghter)\n**Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -520,12 +516,12 @@ with bot:
                     title="Repository",
                     description="Repository GeezProjects",
                     url="https://t.me/geezsupport",
-                    text="**⚡ GeezProjects ⚡**\n➖➖➖➖➖➖➖➖➖➖\n**Owner :** [VICKY](https://t.me/vckyaz)\n✨ **Support :** @GeezSupport\n**Repository :** [GeezProjects](https://github.com/vckyou/Geez-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**⚡ GeezProjects ⚡**\n➖➖➖➖➖➖➖➖➖➖\n**Owner :** [Wang](@N9_Feghter)\n✨ **Support :** https://t.me/yailahwangs\n**Repository :** [SupraGeter](https://github.com/Panglimaa/suprabalapt)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/GeezSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/yailahwangs"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/vckyou/Geez-Userbot"
+                                "ʀᴇᴘᴏ", "https://github.com/Panglimaa/suprabalap"
                             ),
                         ],
                     ],
@@ -536,10 +532,10 @@ with bot:
                     title="GeezProjects",
                     description="GeezProjects | Telethon",
                     url="https://t.me/GeezSupport",
-                    text=f"**GeezProjects**\n➖➖➖➖➖➖➖➖➖➖\n**OWNER:** [VICKY](t.me/vckyaz)\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @GeezProject\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**GeezProjects**\n➖➖➖➖➖➖➖➖➖➖\n**OWNER:** [Wang](t.me/N9_Feghter)\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @yailahwangs\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/geezprojectt"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/yailahwangs"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ", "https://github.com/ramadhani892/RAM-UBOT"
                             ),
@@ -572,32 +568,32 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@Geez-Userbot"):
+            if event.query.user_id == uid and query.startswith("@SupraSupport"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=geezlogo,
                     link_preview=False,
-                    text=f"GeezProjects\n\n**Owner : [VICKY](t.me/vckyaz)**\n\n**Bot Ver :** `{BOT_VER}`\n**𝗠odules :** `{len(dugmeler)}`",
+                    text=f"SupraBalap\n\n**Owner : [Wang](t.me/N9_Feghter)**\n\n**Bot Ver :** `{BOT_VER}`\n**𝗠odules :** `{len(dugmeler)}`",
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari GeezProjects ",
+                    "Bantuan Dari SupraBalap ",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
                     "GeezProjects",
-                    text="""**GeezProjects\n\n Harap Buat Userbot Anda Sendiri:** __Klik Dibawah Ini Jika Ingin Belajar__ 👇""",
+                    text="""**SupraBalap\n\n Harap Buat Userbot Anda Sendiri:** __Klik Dibawah Ini Jika Ingin Belajar__ 👇""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "GeezProjects",
-                                "https://github.com/vckyou/Geez-Userbot"),
+                                "SupraBalap",
+                                "https://github.com/Panglimaa/suprabalap"),
                             custom.Button.url(
                                 "OWNER",
-                                "t.me/GeezSupport")]],
+                                "t.me/N9_Feghter")]],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
@@ -632,9 +628,9 @@ with bot:
                     buttons=[
                         [
                             Button.url("Channel Support",
-                                       "t.me/GeezProjectt"),
+                                       "t.me/yailahwangs"),
                             Button.url("Group Support",
-                                       "t.me/GeezSupport")],
+                                       "t.me/SupraSupport")],
                         [Button.inline("Open Menu", data="reopen")],
                         [custom.Button.inline(
                             "Close", b"close")],

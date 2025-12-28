@@ -6,23 +6,7 @@ from userbot import CMD_HELP, DEVS
 
 GCAST_BLACKLIST = [
     -1001473548283,  # SharingUserbot
-    -1001752592753,  # TedeSupport
-    -1001476936696,  # AnosSupport
-    -1001327032795,  # UltroidSupport
-    -1001294181499,  # UserBotIndo
-    -1001419516987,  # VeezSupportGroup
-    -1001459812644,  # GeezSupportGroup
-    -1001296934585,  # X-PROJECT BOT
-    -1001481357570,  # UsergeOnTopic
-    -1001459701099,  # CatUserbotSupport
-    -1001109837870,  # TelegramBotIndonesia
-    -1001752592753,  # Skyzusupport
-    -1001456135097,  # SpamBot
-    -1001462425381,  # RamSupportGroup
-    -1001699144606,  # its
-    -1001267233272,  # POCONG SEREM
-    -1001386557465,  # Kitarosupport
-    -1001692751821,  # ramsupportt
+    -1003484431583,  # SupraSupport
 ]
 
 # BLACKLIST IN GROUP SUPPORT
@@ -37,7 +21,7 @@ async def gcast(event):
     else:
         await event.edit("**Berikan Sebuah Pesan atau Reply**")
         return
-    kk = await event.edit("`Sedang Mengirim Pesan Secara Global... 📢`")
+    kk = await event.edit("`Sebentar Supra Balap Sedang Otw Kirim... 📢`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
@@ -55,17 +39,17 @@ async def gcast(event):
                 except BaseException:
                     er += 1
     await kk.edit(
-        f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
+        f"**Supra Balap Sudah Berhasil Mengirim Paket** `{done}` **Grup,Supra Balap Gagal Mengirim Pesan Ke** `{er}` **Grup**"
     )
 
 @register(outgoing=True, pattern=r"^\.gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if not xx:
-        return await event.edit("`Sedang Mengirim pesan secara global`")
+        return await event.edit("`Supra Balap Sedang Mengirim Paket Secara Global`")
     tt = event.text
     msg = tt[7:]
-    kk = await event.edit("`Sedang Mengirim pesan secara global!!!...`")
+    kk = await event.edit("`Supra Balap Sedang Mengirim Paket Secara Global!!!...`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
@@ -88,11 +72,11 @@ async def gucast(event):
 CMD_HELP.update(
     {
         "gcast": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gcast`\
-         \n↳ : Mengirim Pesan Group Secara Global."})
+         \n↳ : Sebentar Supra Balap Sedang Otw Kirim."})
 
 CMD_HELP.update(
     {
          "gucast": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gucast`\
-         \n↳ : Mengirim Pesan Pribadi Secara Global."
+         \n↳ : Sebentar Supra Balap Sedang Otw Kirim."
     }
 )

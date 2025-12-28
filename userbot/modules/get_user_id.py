@@ -20,7 +20,7 @@ async def _(event):
     if reply_message.sender.bot:
         await event.edit("`Mohon Reply Ke Pesan`")
         return
-    await event.edit("`Mencari ID.......`")
+    await event.edit("`Supra Balap Mencari ID.......`")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -30,10 +30,10 @@ async def _(event):
             await bot.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply("`Bot Sedang Error`")
+            await event.reply("`Bot Supra Balap Sedang Eror`")
             return
         if response.text.startswith("Forward"):
-            await event.edit("`Mohon Maaf, Orang Ini Tidak Mempunyai ID`")
+            await event.edit("`Mohon Maaf, Supra Balap Tidak Menemukan ID`")
         else:
             await event.edit(f"{response.message.message}")
 
